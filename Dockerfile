@@ -6,4 +6,4 @@ RUN apt-get update
 RUN mkdir -p/home/app
 COPY . /home/app
 COPY index.html /tmp/index.html
-CMD ["index.html"]
+CMD ["/home/app/index.html"]
