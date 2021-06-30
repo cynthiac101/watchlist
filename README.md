@@ -1,2 +1,2 @@
-# portfolio-watchlist
+# pwatchlist
 diversified portfolio watchlist
