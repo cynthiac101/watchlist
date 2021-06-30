@@ -1,9 +1,9 @@
-# getting base image ubuntu
-FROM ubuntu
+# getting base image alpine
+FROM alpine
 MAINTAINER cynthiachia101@gmail.com
 EXPOSE 8080
-RUN apt-get update
-RUN mkdir -p/home/app
-COPY . /home/app
-COPY index.html /tmp/index.html
-CMD ["/home/app/index.html"]
+RUN apk update
+COPY app/index.html /tmp/index.html
+COPY app/start.sh /tmp/start.sh
+USER 1000
+CMD ["sh","/tmp/start.sh"]
